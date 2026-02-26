@@ -1,0 +1,153 @@
+@use "_mixins.scss" as *;
+@use "_variables.scss" as *;
+@use "_iconfont.scss" as *;
+@use "_reset.scss";
+
+// ---------------------RENT-CAR------------------///
+
+.mobile-menu {
+  top: toRem(65);
+  &__list--auth {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    margin-top: toRem(15);
+
+    &--sign-in {
+      border: toRem(1) solid #9fc5f5;
+      background: linear-gradient(
+        90deg,
+        #f6f2ff 0vw,
+        #9fc5f5 50vw,
+        #f6f2ff 100vw
+      );
+      padding: toRem(8) toRem(12);
+    }
+
+    &--sign-up {
+      padding: toRem(8) toRem(12);
+      border: toRem(1) solid #9fc5f5;
+      background: linear-gradient(
+        90deg,
+        #f6f2ff 0vw,
+        #9fc5f5 50vw,
+        #f6f2ff 100vw
+      );
+    }
+  }
+}
+.site-auth {
+  @media (max-width: toEm($mobile)) {
+    display: none;
+  }
+}
+.site-header {
+  padding: toRem(20);
+  background: linear-gradient(90deg, #f6f2ff 0vw, #9fc5f5 50vw, #f6f2ff 100vw);
+
+  @include adaptiveValue(" margin-bottom", 40, 15);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: toRem(20);
+    @media (max-width: toEm($mobile)) {
+      gap: toRem(40);
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue(" gap", 40, 15);
+    @media (max-width: toEm(1100)) {
+      gap: toRem(20);
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+  }
+}
+.logo {
+  &__image {
+    width: toRem(120);
+    height: auto;
+  }
+}
+
+.site-nav {
+  display: flex;
+  @include adaptiveValue(" gap", 40, 15);
+  @media (max-width: toEm($mobile)) {
+    display: none;
+  }
+
+  &__link {
+    color: #484848;
+    font-weight: 500;
+    font-size: toRem(16);
+    line-height: 1.5;
+
+    @media (any-hover: hover) and (pointer: fine) {
+      &:hover {
+        color: #1572d3;
+      }
+    }
+  }
+}
+
+.site-auth {
+  display: flex;
+  gap: toRem(8);
+  @media (max-width: toEm(1025)) {
+    order: 2;
+  }
+  @media (max-width: toEm($mobile)) {
+    display: none;
+  }
+
+  &__link--sign-in {
+    color: #484848;
+    padding: toRem(16) toRem(32);
+    border-radius: toRem(8);
+    font-weight: 500;
+    box-sizing: border-box;
+
+    @media (any-hover: hover), (pointer: fine) {
+      &:hover {
+        background-color: #1572d3;
+        color: #fff;
+      }
+    }
+    @media (max-width: toEm(1100)) {
+      border: toRem(1) solid #1572d3;
+      border-radius: toRem(2);
+      padding: toRem(6) toRem(10);
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__link--sign-up {
+    color: #484848;
+    padding: toRem(16) toRem(32);
+    border-radius: toRem(8);
+    font-weight: 500;
+    box-sizing: border-box;
+    @media (any-hover: hover), (pointer: fine) {
+      &:hover {
+        background-color: #1572d3;
+        color: $white;
+      }
+    }
+    @media (max-width: toEm(1100)) {
+      border: toRem(1) solid #1572d3;
+      border-radius: toRem(2);
+      padding: toRem(6) toRem(10);
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

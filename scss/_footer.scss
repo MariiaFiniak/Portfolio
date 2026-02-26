@@ -1,0 +1,216 @@
+@use "_mixins.scss" as *;
+@use "_variables.scss" as *;
+@use "_iconfont.scss" as *;
+@use "_reset.scss";
+
+// --------------footer----------------//
+
+.footer {
+  @include adaptiveValue("margin-bottom", 86, 30);
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: toRem(40);
+    padding: toRem(40) toRem(20);
+  }
+
+  &__company {
+    flex: 1 1 toRem(250);
+    @media (max-width: toEm($tablet)) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .company__title {
+      font-size: toRem(44);
+      font-weight: 500;
+      color: $st1;
+      margin-bottom: toRem(19);
+      transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+
+      @media (any-hover: hover) and (pointer: fine) {
+        &:hover {
+          color: lighten($st1, 15%);
+          transform: translateY(toRem(-2));
+          cursor: pointer;
+        }
+      }
+    }
+
+    .company__text {
+      color: $textCLR;
+      font-size: toRem(13);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+  }
+
+  &__nav {
+    flex: 2 1 toRem(400);
+    @media (max-width: toEm($tablet)) {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav__list {
+      display: flex;
+      gap: toRem(60);
+      flex-wrap: wrap;
+    }
+
+    .nav__item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav__title {
+      color: $black;
+      font-size: toRem(21);
+      font-weight: 700;
+      margin-bottom: toRem(20);
+      line-height: 1.2;
+      transition: color 0.2s ease;
+
+      @media (any-hover: hover) and (pointer: fine) {
+        &:hover {
+          color: darkslategrey;
+        }
+      }
+    }
+
+    .nav__text {
+      color: $textCLR;
+      font-size: toRem(14);
+      font-weight: 500;
+      line-height: 1.4;
+      margin-bottom: toRem(12);
+      cursor: pointer;
+    }
+  }
+  .social {
+    display: flex;
+    flex-direction: column;
+    @media (max-width: toEm($tablet)) {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__social {
+    flex: 1 1 toRem(250);
+    margin-top: toRem(20);
+	 
+
+    .social__networks {
+      display: flex;
+      align-self: flex-start;
+      gap: toRem(25);
+      margin-bottom: toRem(15);
+      @media (max-width: toEm($tablet)) {
+        align-self: center;
+      }
+
+      .social__icon {
+        width: toRem(41);
+        height: toRem(41);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: $white;
+        box-shadow: 0 toRem(4) toRem(8) rgba(0, 0, 0, 0.12);
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        @media (any-hover: hover) and (pointer: fine) {
+          &:hover {
+            transform: translateY(toRem(-2));
+          }
+        }
+
+        &--instagram {
+          background: conic-gradient(
+            from 180deg at 50% 50%,
+            #b8d2f1 0%,
+            #f289aa 17%,
+            #c68bf0 29%,
+            #d164da 43%,
+            #c963e8 61%,
+            #bfc2e8 72%,
+            #ffc999 80%,
+            #d0d8c9 88%,
+            #bad0f1 93%,
+            #bad0f1 100%
+          );
+          border: none;
+        }
+      }
+    }
+
+    .app {
+     
+
+      align-self: flex-start;
+		   @media (max-width: toEm($tablet)) {
+         align-self: center;
+        }
+      &__title {
+        font-size: toRem(18);
+        font-weight: 500;
+        color: $textCLR;
+        margin-bottom: toRem(10);
+        @media (max-width: toEm($tablet)) {
+          text-align: center;
+        }
+      }
+
+     
+      &__button {
+        padding: toRem(5) toRem(15);
+        border-radius: toRem(18);
+        background-color: $black;
+        color: $white;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        @media (any-hover: hover) and (pointer: fine) {
+          &:hover {
+            transform: translateY(toRem(-2));
+          }
+        }
+
+        &__icon img {
+          width: toRem(20);
+          height: auto;
+        }
+
+        &__text img {
+          height: toRem(15);
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    width: 100%;
+    margin-top: toRem(20);
+    text-align: center;
+
+    .footer__link {
+      font-size: toRem(12);
+      color: $textCLR;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+      @media (any-hover: hover) and (pointer: fine) {
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

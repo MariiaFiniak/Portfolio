@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="styles/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:regular,italic,500,600,700,800,900" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Volkhov:regular,700" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Volkhov:regular,700" rel="stylesheet" />
+	<title>Travel Agency</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__top top-header">
+				<div class="top-header__container">
+					<div class="top-header__moon">
+						<img src="img/header-moon.svg" alt="#">
+					</div>
+				<a href="rentcar.html" class="top-header__logo logo">
+					<img src="img/Logo.png" alt="logo" class="logo__image">
+				</a>
+					<nav class="top-header__navigation navigation">
+						<ul class="navigation__list">
+							<li class="navigation__item">
+								<a href="#" class="navigation__link">Destinations</a>
+							</li>
+							<li class="navigation__item">
+								<a href="#" class="navigation__link">Hotels</a>
+							</li>
+							<li class="navigation__item">
+								<a href="#" class="navigation__link">Flights</a>
+							</li>
+							<li class="navigation__item">
+								<a href="#" class="navigation__link">Bookings</a>
+							</li>
+							<li class="navigation__item">
+								<a href="#" class="navigation__link">Login</a>
+							</li>
+							<li class="navigation__item">
+								<div class="actions-top-header">
+									<a target="_blank" href="#" class="actions-top-header__auth">Sign Up</a>
+								</div>
+							</li>
+							<li class="navigation__item">
+								<label class="lang-currency">
+									<select name="form[currency]" class="lang-currency__select">
+										<option value="eur" class="lang-currency__item">EUR</option>
+										<option value="usd" class="lang-currency__item">USD</option>
+										<option value="uah" class="lang-currency__item">UAH</option>
+									</select>
+								</label>
+							</li>
+						</ul>
+						<button class="icon-menu" type="button" id="burger">
+							<span></span>
+						</button>
+						<div class="mobile-menu" id="mobileMenu">
+							<ul class="mobile-menu__list">
+								<li class="mobile-menu__item">
+									<a href="#category">Category</a>
+								</li>
+								<li class="mobile-menu__item">
+									<a href="#destinations">Destinations</a>
+								</li>
+								<li class="mobile-menu__item">
+									<a href="#reservation">Reservation</a>
+								</li>
+								<li class="mobile-menu__item">
+									<a href="#testimonials">Testimonials</a>
+								</li>
+								<li class="mobile-menu__item">
+									<a href="#subscribe">Subscribe</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		
+		</header>
+		<main class="main">
+				<div class="hero">
+					<div class="hero__content content-hero">
+						<div class="content-hero__container">
+							<div class="content-hero__body">
+								<div class="content-hero__tagline"> Best Destinations around the world </div>
+								<h2 class="content-hero__title ">Travel, <span class="title-decor">enjoy</span> and live a new and full life </h2>
+								<div class="content-hero__text"> Built Wicket longer admire do barton vanity itself do in it. <br> Preferred to sportsmen it engrossed listening. Park gate <br> sell they west hard for the. </div>
+								<div class="content-hero__buttons">
+									<button class="content-hero__button "> Find out more </button>
+									<button class="play-demo">
+										<img class="play-demo__icon" src="img/icons/play-button.svg" alt="#">
+										<span class="play-demo__text">Play Demo</span>
+									</button>
+								</div>
+							</div>
+							<div class="content-hero__media media-content">
+								<div class="media-content__plane media-content__plane_1">
+									<img src="img/icons/hero-plain1.svg" alt="Plain">
+								</div>
+								<div class="media-content__plane media-content__plane_2">
+									<img src="img/icons/plain-2.svg" alt="Plain">
+								</div>
+								<div class="media-content__image">
+									<img src="img/Hero-image.png" alt="Happy women sitting on a suitcase">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<section id="category" class="main__category category-main">
+				<div class="category-main__container">
+					<div class="category-main__decor-star">
+						<img src="img/icons/category-decor-star.svg" alt="#">
+					</div>
+					<div class="category-main__title-body">
+						<p class="category-main__label">category</p>
+						<h2 class="category-main__title">We Offer Best Services</h2>
+					</div>
+					<div class="category-main__cards">
+						<div class="category-main__card card">
+							<div class="card__picture">
+								<img src="img/icons/icon-category1.svg" alt="#" class="card__icon-category">
+							</div>
+							<div class="card__body">
+								<h3 class="card__title">Calculated Weather </h3>
+								<p class="card__text">Built Wicket longer admire do barton vanity itself do in it.</p>
+							</div>
+						</div>
+						<div class="category-main__card card ">
+							<div class="card__picture">
+								<img src="img/icons/icon-category2.svg" alt="#" class="card__icon-category">
+							</div>
+							<div class="card__body">
+								<h2 class="card__title">Best Flights </h2>
+								<p class="card__text">Engrossed listening. Park gate sell they west hard for the.</p>
+							</div>
+						</div>
+						<div class="category-main__card card">
+							<div class="card__picture card__picture">
+								<img src="img/icons/icon-category3.svg" alt="#" class="card__icon-category">
+							</div>
+							<div class="card__body">
+								<h2 class="card__title">Local Events </h2>
+								<p class="card__text">Barton vanity itself do in it. Preferd to men it engrossed listening.</p>
+							</div>
+						</div>
+						<div class="category-main__card card">
+							<div class="card__picture">
+								<img src="img/icons/icon-category4.svg" alt="#" class="card__icon-category">
+							</div>
+							<div class="card__body">
+								<h2 class="card__title">Customization </h2>
+								<p class="card__text">We deliver outsourced aviation services for military customers</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="destinations" class="main__destinations destinations-section">
+				<div class="destinations-section__container">
+					<div class="destinations-section__title-body">
+						<p class="destinations-section__text">Top Selling</p>
+						<h2 class="destinations-section__title">Top Destinations</h2>
+					</div>
+					<div class="destinations-section__cards">
+						<div class="destinations-section__card card-destinations">
+							<a href="#" class="card-destinations__link">
+								<figure class="card-destinations__picture">
+									<img src="img/destination1.jpg" alt="#">
+								</figure>
+								<div class="card-destinations__body">
+									<div class="card-destinations__country">
+										<h2 class="card-destinations__title"> Rome, Italty</h2>
+										<p class="card-destinations__text">$5,42k</p>
+									</div>
+									<div class="card-destinations__days-trip">
+										<img src="img/navigation-destination.svg" alt="#"><span>10 Days Trip</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="destinations-section__card card-destinations">
+							<a href="#" class="card-destinations__link">
+								<figure class="card-destinations__picture">
+									<img src="img/Destination2.jpg" alt="#">
+								</figure>
+								<div class="card-destinations__body">
+									<div class="card-destinations__country">
+										<h2 class="card-destinations__title"> Rome, Italty</h2>
+										<p class="card-destinations__text">$5,42k</p>
+									</div>
+									<div class="card-destinations__days-trip">
+										<img src="img/navigation-destination.svg" alt="#"><span>10 Days Trip</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="destinations-section__card card-destinations ">
+							<div class="card-destinations__decor"></div> <!-- Декор над карткою -->
+							<a href="#" class="card-destinations__link">
+								<figure class="card-destinations__picture">
+									<img src="img/destination3.jpg" alt="#">
+								</figure>
+								<div class="card-destinations__body">
+									<div class="card-destinations__country">
+										<h2 class="card-destinations__title"> Rome, Italty</h2>
+										<p class="card-destinations__text">$5,42k</p>
+									</div>
+									<div class="card-destinations__days-trip">
+										<img src="img/navigation-destination.svg" alt="#"><span>10 Days Trip</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="reservation" class="main__reservation reservation-section">
+				<div class="reservation-section__container">
+					<div class="reservation-section__cards">
+						<!-- LEFT -->
+						<div class="reservation-section__card reservation-section__card--active">
+							<div class="reservation-section__main-text">
+								<h2 class="reservation-section__subtitle">Easy and Fast</h2>
+								<p class="reservation-section__big-title"> Book your next trip <br> in 3 easy steps </p>
+							</div>
+							<div class="reservation-section__step reservation-section__step--destination">
+								<h3 class="reservation-section__title">Choose Destination</h3>
+								<p class="reservation-section__text">Lorem ipsum dolor sit amet.</p>
+							</div>
+							<div class="reservation-section__step reservation-section__step--payment">
+								<h3 class="reservation-section__title">Make Payment</h3>
+								<p class="reservation-section__text">Lorem ipsum dolor sit amet.</p>
+							</div>
+							<div class="reservation-section__step reservation-section__step--airport">
+								<h3 class="reservation-section__title">Reach Airport</h3>
+								<p class="reservation-section__text">Lorem ipsum dolor sit amet.</p>
+							</div>
+						</div>
+						<!-- RIGHT -->
+						<div class="reservation-section__card reservation-section__card--views">
+							<div class="bottom-card">
+								<div class="bottom-card__picture">
+									<img src="img/section-reservation-women.jpg" alt="women" class="bottom-card__image">
+								</div>
+								<div class="bottom-card__content">
+									<h2 class="bottom-card__title">Trip To Greece</h2>
+									<p class="bottom-card__text">14-29 June | Robbin Joseph</p>
+									<div class="bottom-card__icons">
+										<div class="bottom-card__icon"><img src="./img/icons/section-reservation-icon1.svg" alt="#"></div>
+										<div class="bottom-card__icon"><img src="./img/icons/section-reservation-icon2.svg" alt="#"></div>
+										<div class="bottom-card__icon"><img src="./img/icons/section-reservation-icon3.svg" alt="#"></div>
+									</div>
+									<div class="bottom-card__people">
+										<span>24 people going</span>
+									</div>
+								</div>
+							</div>
+							<div class="card-top">
+								<div class="card-top__image">
+									<img src="img/icons/section-reservation-icon-castle.svg" alt="#">
+								</div>
+								<div class="card-top__content">
+									<p class="card-top__text">Ongoing</p>
+									<h3 class="card-top__title">Trip to Rome</h3>
+									<span class="card-top__complet">40% completed</span>
+									<div class="card-top__bar">
+										<div class="card-top__fill"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="testimonials" class="main__testimonials testimonials-section">
+				<div class="testimonials-section__container">
+					<!-- LEFT -->
+					<div class="testimonials-section__left">
+						<div class="site-title">
+							<p class="site-title__subtitle">Testimonials</p>
+							<h2 class="site-title__title"> What people say <br> About Us. </h2>
+						</div>
+						<div class="slider-controls slider-controls--testimonials">
+							<button class="slider-controls__btn">
+								<img src="img/icons/testimonials-buttom1.svg" alt="">
+							</button>
+							<button class="slider-controls__btn">
+								<img src="img/icons/testimonials-buttom2.svg" alt="">
+							</button>
+							<button class="slider-controls__btn">
+								<img src="img/icons/testimonials-buttom3.svg" alt="">
+							</button>
+						</div>
+					</div>
+					<!-- RIGHT  -->
+					<div class="testimonials-section__right">
+						<div class="testimonials-section__cards">
+							<article class="testimonial-card testimonial-card--active">
+								<img src="img/icons/testemonials-man.svg" alt="Mike Taylor" class="testimonial-card__avatar">
+								<div class="testimonial-card__content">
+									<p class="testimonial-card__text"> “On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next.” </p>
+									<p class="testimonial-card__name">Mike Taylor</p>
+									<p class="testimonial-card__location">Lahore, Pakistan</p>
+								</div>
+							</article>
+							<article class="testimonial-preview">
+								<p class="testimonial-preview__name">Chris Thomas</p>
+								<p class="testimonial-preview__position">CEO of Red Button</p>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main__logos logos-sections">
+				<div class="logos-sections__container">
+					<div class="logos-sections__items-logos">
+						<img src="img/icons/logos1.svg" alt="logo" class="logos-sections__item-logos">
+					</div>
+					<div class="logos-sections__items-logos">
+						<img src="img/icons/logos2.svg" alt="logo" class="logos-sections__item-logos">
+					</div>
+					<div class="logos-sections__items-logos">
+						<img src="img/icons/logos3.svg" alt="logo" class="logos-sections__item-logos">
+					</div>
+					<div class="logos-sections__items-logos">
+						<img src="img/icons/logos4.svg" alt="logo" class="logos-sections__item-logos">
+					</div>
+					<div class="logos-sections__items-logos">
+						<img src="img/icons/logos5.svg" alt="logo" class="logos-sections__item-logos">
+					</div>
+				</div>
+			</section>
+			<section id="subscribe" class="main__subscribe subscribe-section">
+				<div class="subscribe-section__container">
+					<div class="subscribe-section__decor decor">
+						<div class="decor__circle decor__circle--primary">
+							<img src="img/subscribe-left.svg" alt="">
+						</div>
+						<div class="decor__circle decor__circle--secondary">
+							<img src="img/subscribe-right.svg" alt="">
+						</div>
+						<div class="decor__star">
+							<img src="img/subscribe-right-bottom-star.svg" alt="">
+						</div>
+					</div>
+					<div class="subscribe-section__title">
+						<h2 class="subscribe-section__heading"> Subscribe to get information, latest news and other </h2>
+						<span class="subscribe-section__subtitle"> interesting offers about Jadoo </span>
+					</div>
+					<!-- FORM -->
+					<div class="subscribe-section__form">
+						<form class="subscribe-form" id="subscribeForm" novalidate>
+							<div class="subscribe-form__body">
+								<img src="img/icons/subscribe-icon-mail.svg" alt="" class="subscribe-form__icon">
+								<input type="email" id="subscribeEmail" class="subscribe-form__input" placeholder="Your email" required>
+							</div>
+							<button type="submit" class="subscribe-form__button"> Subscribe </button>
+							<p class="subscribe-form__message" id="subscribeMessage"></p>
+							<div class="subscribe-form__icon-send">
+								<img src="img/icons/subscribe-send.svg" alt="">
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__company company">
+					<h2 class="company__title">Jadoo.</h2>
+					<p class="company__text"> Book your trip in minute, get full <br> Control for much longer. </p>
+				</div>
+				<nav class="footer__nav nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<h3 class="nav__title">Company</h3>
+							<p class="nav__text">About</p>
+							<p class="nav__text">Careers</p>
+							<p class="nav__text">Mobile</p>
+						</li>
+						<li class="nav__item">
+							<h3 class="nav__title">Contact</h3>
+							<p class="nav__text">Help/FAQ</p>
+							<p class="nav__text">Press</p>
+							<p class="nav__text">Affiliates</p>
+						</li>
+						<li class="nav__item">
+							<h3 class="nav__title">More</h3>
+							<p class="nav__text">Airline Fees</p>
+							<p class="nav__text">Airline</p>
+							<p class="nav__text">Low fare tips</p>
+						</li>
+					</ul>
+				</nav>
+				<div class="footer__social social">
+					<div class="social__networks">
+						<div class="social__icon social__icon--facebook">
+							<img src="img/icons/footer-facebook.svg" alt="Facebook">
+						</div>
+						<div class="social__icon social__icon--instagram">
+							<img src="img/icons/footer-instagram.svg" alt="Instagram">
+						</div>
+						<div class="social__icon social__icon--twitter">
+							<img src="img/icons/footer-twitter.svg" alt="Twitter">
+						</div>
+					</div>
+					<div class="social__app app">
+						<h2 class="app__title">Discover our app</h2>
+						<div class="app__buttons">
+							<button class="app__button app__button--google">
+								<span class="app__icon">
+									<img src="img/icons/footer-google.svg" alt="Google Play">
+								</span>
+								<span class="app__text">
+									<img src="img/icons/footer-text-google.svg" alt="Google Play text">
+								</span>
+							</button>
+							<button class="app__button app__button--apple">
+								<span class="app__icon">
+									<img src="img/icons/footer-apple.svg" alt="Apple Store">
+								</span>
+								<span class="app__text">
+									<img src="img/icons/footer-text-apple.svg" alt="Apple Store text">
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__copyright">
+				<a href="mailto:reserved@jadoo.com" class="footer__link" target="_blank" rel="noopener noreferrer"> All rights reserved@jadoo.com </a>
+			</div>
+		</footer>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

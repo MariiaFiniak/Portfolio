@@ -1,0 +1,135 @@
+@use "_mixins.scss" as *;
+@use "_variables.scss" as *;
+@use "_iconfont.scss" as *;
+@use "_reset.scss";
+
+
+.booking {
+  &__container {
+    display: flex;
+    @include adaptiveValue("gap", 122, 40);
+    align-items: center;
+
+    @media (max-width: toEm($tablet)) {
+      gap: toRem(10);
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: toEm(846)) {
+      gap: toRem(20);
+      justify-content: center;
+    }
+
+    @media (max-width: toEm($mobile)) {
+      flex-direction: column;
+    }
+  }
+
+
+  &__field {
+    display: flex;
+    gap: toRem(16);
+    align-items: center;
+  }
+
+
+  &__image {
+    display: flex;
+    align-items: center;
+
+    img {
+      transition: transform 0.3s ease;
+    }
+
+   
+    @media (any-hover: hover) and (pointer: fine) {
+      &:hover img {
+        transform: scale(1.15);
+      }
+    }
+  }
+
+
+  &__image--line {
+    position: relative;
+    padding-left: toRem(24);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: toRem(1);
+      height: toRem(40);
+      background-color: #b6b6b6;
+    }
+	     @media (max-width: toEm($tablet)) {
+			 padding-left: toRem(0);
+       &::before {
+			display: none;
+			
+		
+		 }
+    }
+  }
+
+
+  &__activ {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  &__label {
+    color: #3e3e3e;
+    font-size: toRem(16);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+
+  &__input {
+    color: #b6b6b6;
+    font-size: toRem(14);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+
+
+  &__button {
+    color: #484848;
+    padding: toRem(18.5) toRem(51);
+    border-radius: toRem(8);
+    font-weight: 500;
+    font-size: toRem(16);
+    line-height: 1.5;
+   transition: 
+    background-color 0.3s ease, 
+    color 0.3s ease, 
+    padding 0.3s ease;
+
+    @media (any-hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: #1572d3;
+        color: #fff;
+        transform: translateY(toRem(-2));
+      }
+    }
+
+    @media (max-width: toEm($tablet)) {
+      margin: 0 auto;
+      padding: toRem(8) toRem(12);
+      border-radius: toRem(4);
+		width: toRem(200);
+		transform: translateY(toRem(-2));
+		background-color: #1572d3;
+		color: #fff;
+    }
+	   
+  }
+}

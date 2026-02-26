@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:regular,italic,500,600,700,800,900" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Volkhov:regular,700" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Volkhov:regular,700" rel="stylesheet" />
+	<title>Rent CAR</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__site site-header">
+				<div class="site-header__container">
+					<a href="index.html" class="logo">
+						<img src="img/img-rent/logo-rent.svg" alt="Logo" class="logo__image">
+					</a>
+					<nav class="site-header__nav">
+						<ul class="site-nav">
+							<li class="site-nav__item">
+								<a href="#" class="site-nav__link">Become a renter</a>
+							</li>
+							<li class="site-nav__item">
+								<a href="#" class="site-nav__link">Rental deals</a>
+							</li>
+							<li class="site-nav__item">
+								<a href="#" class="site-nav__link">How it works</a>
+							</li>
+							<li class="site-nav__item">
+								<a href="#" class="site-nav__link">Why choose us</a>
+							</li>
+						</ul>
+				
+						<ul class="site-auth">
+							<li class="site-auth__item ">
+								<a href="#" class="site-auth__link site-auth__link--sign-in">Sign In</a>
+							</li>
+							<li class="site-auth__item ">
+								<a href="#" class="site-auth__link site-auth__link--sign-up">Sign Up</a>
+							</li>
+						</ul>
+					
+						<button class="icon-menu" type="button" id="burger">
+							<span></span>
+						</button>
+					</nav>
+				
+					<div class="mobile-menu" id="mobileMenu">
+						<ul class="mobile-menu__list">
+						
+							<li class="mobile-menu__item">
+								<a href="#">Become a renter</a>
+							</li>
+							<li class="mobile-menu__item">
+								<a href="#">Rental deals</a>
+							</li>
+							<li class="mobile-menu__item">
+								<a href="#">How it works</a>
+							</li>
+							<li class="mobile-menu__item">
+								<a href="#">Why choose us</a>
+							</li>
+						</ul>
+			
+						<ul class="mobile-menu__list mobile-menu__list--auth">
+							<li class="mobile-menu__item mobile-menu__item--sign-in">
+								<a href="#">Sign In</a>
+							</li>
+							<li class="mobile-menu__item mobile-menu__item--sign-up">
+								<a href="#">Sign Up</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="booking-side">
+				<div class="booking-side__container">
+					<!-- LEFT CONTENT -->
+					<div class="booking-side__content">
+						<h2 class="booking-side__title"> Find, book and rent a car <span class="title-decor">Easily</span>
+						</h2>
+						<p class="booking-side__text"> Get a car wherever and whenever you need it with your IOS and Android device. </p>
+						<div class="booking-side__social social">
+							<img src="img/img-rent/rent-google.svg" alt="Google" class="social__google">
+							<img src="img/img-rent/rent-apple.svg" alt="Apple" class="social__apple">
+						</div>
+					</div>
+					<!-- RIGHT IMAGE -->
+					<div class="booking-side__car">
+						<img src="img/img-rent/rent-car.jpg" alt="Car" class="booking-side__image">
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<section class="booking">
+				<div class="booking__container">
+					<div class="booking__field">
+						<div class="booking__image">
+							<img src="img/img-rent/rent-location.svg" alt="icon location">
+						</div>
+						<div class="booking__activ">
+							<label class="booking__label">Location</label>
+							<input type="text" placeholder="Search your location" class="booking__input">
+						</div>
+					</div>
+					<div class="booking__field">
+						<div class="booking__image booking__image--line">
+							<img src="img/img-rent/rent-date.svg" alt="icon location">
+						</div>
+						<div class="booking__activ">
+							<label class="booking__label">Pickup date</label>
+							<input type="text" value="Tue 15 Feb, 09:00" class="booking__input">
+						</div>
+					</div>
+					<div class="booking__field">
+						<div class="booking__image booking__image--line">
+							<img src="img/img-rent/rent-return-date.svg" alt="icon location">
+						</div>
+						<div class="booking__activ">
+							<label class="booking__label">Return date</label>
+							<input type="text" value="Thu 16 Feb, 11:00" class="booking__input">
+						</div>
+					</div>
+					<button class="booking__button">Search</button>
+				</div>
+			</section>
+		</footer>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+@use "_mixins.scss" as *;
+@use "_variables.scss" as *;
+@use "_iconfont.scss" as *;
+@use "_reset.scss";
+
+// -------------------- HEADER --------------------
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: ghostwhite;
+  z-index: 999;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: toRem(24);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $cd3;
+
+  &.active {
+    display: flex;
+ 
+  }
+
+  &__item {
+    cursor: pointer;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: darken($cd3, 10%);
+    }
+  }
+}
+
+.top-header__moon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.top-header {
+  position: fixed;
+  z-index: 1000;
+  top: toRem(0);
+  left: toRem(0);
+  width: 100%;
+  transition: 0.3s ease;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $headerGradient;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+  &.scrolled,
+  &.active {
+ .top-header__container {
+    display: flex;
+    align-items: center;
+    min-height: toRem(70);
+   
+  }
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    min-height: toRem(80);
+    padding-top: toRem(10);
+    padding-bottom: toRem(10);
+  }
+
+  &__moon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+}
+
+.logo {
+  margin-right: toRem(30);
+  .logo__image {
+    transition: transform 0.3s ease;
+  }
+
+  @media (any-hover: hover) and (pointer: fine) {
+    &:hover .logo__image {
+      animation: pulseLogo 0.6s ease;
+    }
+  }
+}
+
+@keyframes pulseLogo {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.navigation {
+  display: flex;
+  flex: 1 1 auto;
+  gap: toRem(6);
+  align-items: center;
+  justify-content: flex-end;
+
+  .navigation__list {
+    display: flex;
+    align-items: center;
+
+    @include adaptiveValue("gap", 55, 20);
+    font-family: "Google Sans";
+    color: $st1;
+    @include typography("M", 500);
+    @media (max-width: toEm($tablet)) {
+      gap: toRem(25);
+    }
+    @media (max-width: toEm($mobile)) {
+      display: none;
+    }
+  }
+
+  .logo {
+    .logo__image {
+      transition: transform 0.3s ease;
+    }
+
+    @media (any-hover: hover) and (pointer: fine) {
+      &:hover .logo__image {
+        animation: pulseLogo 0.6s ease;
+      }
+    }
+  }
+
+  @keyframes pulseLogo {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+
+  &__item {
+    .navigation__link {
+      position: relative;
+      padding-block: toRem(3);
+      color: $borderAuth;
+
+      @media (any-hover: hover) and (pointer: fine) {
+        &:hover {
+          opacity: 0.7;
+        }
+        &:hover::after {
+          width: 100%;
+          box-shadow: 0 toRem(4) toRem(4) rgba(0, 0, 0, 0.25);
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: toRem(1.5);
+        width: 0;
+        background-color: currentColor;
+        transition:
+          width 0.3s ease,
+          opacity 0.3s ease;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.actions-top-header__auth {
+  display: inline-block;
+  color: $borderAuth;
+  text-decoration: none;
+  padding: toRem(9) toRem(22);
+  border: toRem(1) solid transparent;
+  border-radius: toRem(5);
+  transition: all 0.3s;
+  border-color: $borderAuth;
+  color: $borderAuth;
+  background-color: transparent;
+  transition: 0.3s ease;
+  @media (any-hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+  @media (max-width: toEm($tablet)) {
+    padding: toRem(8) toRem(16);
+  }
+  @media (max-width: toEm($mobile)) {
+    border: toRem(1) solid rgba(0, 0, 0, 0.05);
+    padding: toRem(6) toRem(10);
+    background: linear-gradient(
+      90deg,
+      #d8c8ff 0%,
+      rgb(191, 217, 247) 50%,
+      #d8c8ff 100%
+    );
+    margin-bottom: toRem(10);
+  }
+}

@@ -1,0 +1,169 @@
+@use "sass:math";
+@use "_reset.scss";
+@use "_variables.scss" as *;
+@use "_iconfont.scss";
+@use "_mixins.scss" as *;
+// Parts
+@use "_header.scss";
+@use "_main.scss";
+@use "_footer.scss";
+@use "_rent-header.scss";
+@use "_rent-main.scss";
+@use "_rent-footer.scss";
+
+// Pages
+/* курсор  є */
+/*   @media(any-hover:hover),(pointer:fine){
+	&:hover{
+		
+	}
+  }
+
+} */
+/* якщо курсору немає */
+/* @media(any-hover:none),(pointer:corse){
+  
+} */
+/* .section1__item{
+		flex: 0 1 calc(100% / 2- (1.8125rem * (2-1) / 2));
+	} */
+/* Логічні властивості */
+/* .logical { */
+/* width -> inline-size */
+/* height -> block-size */
+/*
+		max-block-size: ;
+		max-inline-size: ;
+		min-block-size: ;
+		min-inline-size: ;
+	*/
+
+/* padding-left -> padding-inline-start */
+/* padding-right -> padding-inline-end */
+/* padding-top -> padding-block-start */
+/* padding-bottom -> padding-block-end */
+
+/* padding: 10px 0 -> padding-block: 10px */
+/* padding: 0 10px -> padding-inline: 10px */
+
+/* border-left -> border-inline-start */
+/* border-right -> border-inline-end */
+/* border-top -> border-block-start */
+/* border-bottom -> border-block-end */
+/* } */
+
+body {
+  font-family: "Poppins", sans-serif;
+  @include typography("BODY", 400, 0);
+  
+.open-menu {
+  overflow: hidden;
+}
+
+ 
+
+
+
+  &.scroll-lock {
+      overflow: hidden;
+    touch-action: none;
+    overscroll-behavior: none;
+  }
+
+  &[data-touch] {
+    
+  }
+}
+
+.wrapper {
+overflow: clip;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  > main {
+    flex-grow: 1;
+  }
+}
+[class*="__container"] {
+  max-width: toRem($containerWidth);
+  padding-inline: toRem(math.div($containerPadding, 2));
+  margin: 0 auto;
+}
+body.open-menu {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+}
+.hero__content {
+  @include adaptiveValue("margin-bottom", 97, 60);
+}
+.main {
+	
+  &__category {
+    @include adaptiveValue("margin-bottom", 123, 60);
+  }
+
+  &__destinations {
+    @include adaptiveValue("margin-bottom", 189, 60);
+  }
+
+  &__reservation {
+    @include adaptiveValue("margin-bottom", 189, 39);
+  }
+
+  &__testimonials {
+    @include adaptiveValue("margin-bottom", 103, 90);
+  }
+
+  &__subscribe {
+    @include adaptiveValue("margin-bottom", 172, 30);
+  }
+}
+.icon-menu {
+  @media (min-width: toEm($mobile)) {
+    display: none;
+  }
+  @media (max-width: toEm($mobile)) {
+    flex-shrink: 0;
+    position: relative;
+    width: toRem(30);
+    height: toRem(18);
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.5s;
+      position: absolute;
+      height: toRem(2);
+      width: 100%;
+      right: 0;
+      background-color: $cd3;
+    }
+    span {
+      top: 50%;
+      translate: 0 -50%;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    .open-menu & {
+      span {
+        width: 0;
+      }
+      &::before {
+        top: 50%;
+        rotate: -45deg;
+        translate: 0 -50%;
+      }
+      &::after {
+        rotate: 45deg;
+        translate: 0 50%;
+        bottom: 50%;
+      }
+    }
+  }
+}
